@@ -36,6 +36,12 @@ img {
   text-decoration: none;
   color: var(--prymary-text-color);
   display: block;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.btn {
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .list {
   list-style: none;
@@ -235,11 +241,14 @@ img {
   opacity: 0;
   pointer-events: none;
 }
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(0.9);
+}
 .modal {
   position: absolute;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) scale(1);
 
   padding: 15px;
 
@@ -250,21 +259,36 @@ img {
   background: var(--second-accent-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
+  transition: transform 2500ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .btn-modal {
   position: absolute;
-
   top: 8px;
   right: 8px;
 
+  display: inline-block;
   width: 30px;
   height: 30px;
-  padding: 8px, 8px;
+  padding: 8px, 8px, 8px, 8px;
+  border: 1px solid #afb1b8;
 
   border-radius: 50%;
   font-family: inherit;
   background-color: rgba(255, 255, 255, 1);
-  color: 1px solid #afb1b8;
+  cursor: pointer;
+  color: #000000;
+}
+
+.btn-modal::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 18px;
+  height: 18px;
+  background-image: url(../images/close.svg);
+  fill: inherit;
 }
 /* Особливості*/
 .feature {
@@ -476,6 +500,8 @@ img {
   border: 1px solid #afb1b8;
   border-radius: 4px;
   color: var(--icon-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .icon-company {
   width: 106px;
@@ -622,7 +648,6 @@ img {
 
   left: 0;
   top: 100%;
-  /* transform: translate(50%, 50%); */
   width: 100%;
   font-size: 18px;
   line-height: 1.55;
