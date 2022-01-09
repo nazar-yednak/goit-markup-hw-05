@@ -37,11 +37,13 @@ img {
   color: var(--prymary-text-color);
   display: block;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .btn {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .list {
   list-style: none;
@@ -238,6 +240,7 @@ img {
   background-color: rgba(0, 0, 0, 0.2);
 }
 .is-hidden {
+  visibility: hidden;
   opacity: 0;
   pointer-events: none;
 }
@@ -503,8 +506,7 @@ img {
   border: 1px solid #afb1b8;
   border-radius: 4px;
   color: var(--icon-color);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .icon-company {
   width: 106px;
