@@ -24,7 +24,7 @@
         <a class="logo" href="" lang="en"><span class="logo-s">Web</span>Studio</a>
         <nav class="site-nav">
           <ul class="site-nav list">
-            <li class="item"><a class="link current" href="">Студия</a></li>
+            <li class="item"><a class="current link" href="">Студия</a></li>
             <li class="item"><a class="link" href="./portfolio.html">Портфолио</a></li>
             <li class="item"><a class="link" href="">Контакты</a></li>
           </ul>
@@ -54,7 +54,12 @@
       <section class="section-hero section bg-hero">
         <div class="container hero">
           <h1 class="title">Эффективные решения для вашего бизнеса</h1>
-          <button class="btn btn-hero" type="button">Заказать услугу</button>
+          <button class="btn btn-hero" type="button" data-modal-open>Заказать услугу</button>
+          <div class="backdrop is-hidden" data-modal>
+            <div class="modal">
+              <button class="btn-modal" data-modal-close>X</button>
+            </div>
+          </div>
         </div>
       </section>
       <!--Особливості-->
@@ -115,12 +120,17 @@
         <div class="container">
           <h2 class="title">Чем мы занимаемся</h2>
           <ul class="list work-list">
-            <li class="item"><img src="./images/box1.jpg" alt="Набор кода" width="370" /></li>
+            <li class="item">
+              <img src="./images/box1.jpg" alt="Набор кода" width="370" />
+              <p class="text">Десктопные приложения</p>
+            </li>
             <li class="item">
               <img src="./images/box2.jpg" alt="Оптимизация под мобильное устройство" width="370" />
+              <p class="text">Мобильные приложения</p>
             </li>
             <li class="item">
               <img src="./images/box3.jpg" alt="Стилизация сайтов" width="370" />
+              <p class="text">Дизайнерские решения</p>
             </li>
           </ul>
         </div>
@@ -389,5 +399,6 @@
         </div>
       </div>
     </footer>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
